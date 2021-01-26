@@ -3,12 +3,12 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                sh 'mvn --version'
+                sh 'mvnw --version'
             }
         }
         stage('run tests') {
             steps {
-                sh './mvn test'
+                sh './mvnw test'
             }
         }
     }

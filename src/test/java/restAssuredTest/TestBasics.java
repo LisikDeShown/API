@@ -6,11 +6,10 @@ import files.Payload;
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
 import org.junit.jupiter.api.*;
+import org.junit.runner.RunWith;
+import org.junit.runners.Suite;
 
 
-
-
-@TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 
 public class TestBasics {
 
@@ -41,8 +40,9 @@ public class TestBasics {
 
     }
 
-    @Order(2)
+
     @Test
+    @Order(2)
     void testUpdate(){
         String resource = "/maps/api/place/update/json";
 

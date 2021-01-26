@@ -11,7 +11,8 @@ import org.junit.jupiter.api.*;
 
 
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
-public class basics {
+
+public class TestBasics {
 
 
     private static final String URL_ACADEMY = "https://rahulshettyacademy.com";
@@ -19,7 +20,7 @@ public class basics {
 
     @Test
     @Order(1)
-    void testPost () {
+    public void testPost () {
 
         String resource = "/maps/api/place/add/json";
 

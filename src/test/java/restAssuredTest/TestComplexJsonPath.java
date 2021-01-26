@@ -1,21 +1,21 @@
 package restAssuredTest;
 
 import files.Payload;
-//import io.restassured.path.json.JsonPath;
+import io.restassured.path.json.JsonPath;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-import com.jayway.jsonpath.JsonPath;
+
 
 import java.util.List;
 
 
-public class ComplexJsonPath {
-// JsonPath js = new JsonPath(Payload.coursePrice());
-//    JsonPath js1 = new JsonPath(Payload.test1());
-//    JsonPath js2 = new JsonPath(Payload.test2());
+public class TestComplexJsonPath {
+ JsonPath js = new JsonPath(Payload.coursePrice());
+    JsonPath js1 = new JsonPath(Payload.test1());
+    JsonPath js2 = new JsonPath(Payload.test2());
 
-    //Print No of courses returned by API
-  /*  @Test
+//    Print No of courses returned by API
+  @Test
     void coursesAmount(){
 
         int count = js.get("courses.size()");
@@ -74,22 +74,21 @@ public class ComplexJsonPath {
             actualPurchaseAmount+=(price*copies);
         }
         Assertions.assertEquals(purchAmount,actualPurchaseAmount);
-    }*/
+    }
 
     @Test
     void createdTime(){
 //        List <String> json = JsonPath.read(Payload.test1(),"$..eventCreatedTime");
 //        System.out.println(json.get(0));
 
-       // System.out.println(js1.get("@graph.hmEventMetadata.eventCreatedTime").toString());
-
+        System.out.println(js1.get("@graph.hmEventMetadata.eventCreatedTime").toString());//
     }
 
-    @Test
+/* @Test
     void createdTime2(){
         List<String> json = JsonPath.read(Payload.test2(),"$..eventCreatedTime");
         System.out.println(json.get(0));
-    }
+    }*/
 
 
 
